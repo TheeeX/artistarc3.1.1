@@ -14,10 +14,11 @@ db.once('open', function (callback) {
 // create a schema
 var userSchema = new Schema({
   name: String,
+  mobile: String,
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   email: String,
-  admin: Boolean,
+  admin: Boolean,       //{ type: Date, default: Date.now },
   location: String,
   meta: {
     age: Number,
@@ -33,14 +34,14 @@ var userSchema = new Schema({
 // you can also do queries and find similar users 
 userSchema.methods.artify = function() {
   // add some stuff to the users name
-  this.username = '@' + this.username ; 
+  this.username = '@' + (this).username ; 
 
   return this.username; 
 };
 
 // the schema is useless so far
 // we need to create a model using it
-var User = mongoose.model('User', userSchema);
+var User = mongoose.model('artist_pinfo', userSchema);
 
 // make this available to our users in our Node applications
 module.exports = User;

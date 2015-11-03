@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-var testdata = ['test user', 'test100', 'wazxdws', 'mail@mail.com'];
+var testdata = ['Atul Rajan', 'AR', 'wazxdws', 'atul@artistarc.xyz'];
 
 app.get('/addartist-dr', function (req, res) {
     register.addUser(testdata);
@@ -46,8 +46,13 @@ app.post('/addartist2', function (req, res) {
     });
     req.on('end', function () {
         console.log(store);
+        
         var car = JSON.parse(store);
-        console.log(car.name);
+        console.log(car.input_fname);
+
+        register.addUser(car);
+        console.log('  ---- Done!!');
+
         res.setHeader("Content-Type", "text/json");
         res.setHeader("Access-Control-Allow-Origin", "*");
         res.end(store);
