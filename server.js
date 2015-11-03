@@ -47,7 +47,7 @@ app.post('/addartist2', function (req, res) {
     req.on('end', function () {
         console.log(store);
         var car = JSON.parse(store);
-        console.log(car.input_fname);
+        console.log(car.name);
         res.setHeader("Content-Type", "text/json");
         res.setHeader("Access-Control-Allow-Origin", "*");
         res.end(store);
@@ -67,7 +67,7 @@ app.get('/ha', function(req, res) {
 
 app.get('/test', function(req, res){
   /* add statement to increment userbytwo by two here */
-  res.render('signup'); /* update this line to also pass userbytwo */
+  res.render('test-POST-4'); /* update this line to also pass userbytwo */
 });
 
 app.get('/register', function(req, res){

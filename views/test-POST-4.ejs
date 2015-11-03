@@ -14,9 +14,16 @@
         
         <!-- jQuery -->
         <script type='text/javascript' src='assets/jquery/jquery.min.js'></script>
+        <script type='text/javascript' src='main/js/main.js'></script>
         <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script type="text/javascript">
+            /*----------- ma--in js -----------*/
+
+            /*-------------- form submit functions --------------*/
+            /*
+            $(function() {
+
 
             $('#form_registerArtist').submit(function () {
                 var data = JSON.stringify($(this).serializeObject());
@@ -33,8 +40,11 @@
                 })
                 return false;
             });
-            $.fn.serializeObject = function()
-            {
+            */
+            /*--------------- form data to JSON ---------------*/
+            /*
+             $.fn.serializeObject = function()
+             {
                 var o = {};
                 var a = this.serializeArray();
                 $.each(a, function() {
@@ -48,9 +58,17 @@
                     }
                 });
                 return o;
-            };
-            /*-----------Server Side-----------*/
-            /*app.post('/addartist2', function (req, res) {
+             };
+             */
+            /*------------- / . form data to JSON ------------*/
+            /*
+            });
+            */
+           /*------------------/ . ---------------------------*/
+           
+           /*---------------- -Server Side--------------------*/
+           
+           /*app.post('/addartist2', function (req, res) {
 
             var store = '';
 
