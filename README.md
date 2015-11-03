@@ -6,7 +6,7 @@ http://artistarc311.azurewebsites.net/
 
 > Artistarc is web based social platform for artist.
 
-### Devlopment
+### Development
 
 Artistarc uses a number of open source projects to work properly:
 
