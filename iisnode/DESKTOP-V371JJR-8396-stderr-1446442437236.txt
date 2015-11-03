@@ -1,0 +1,34 @@
+Error: Failed to lookup view "test" in views directory "C:\xampp\htdocs\karan\artistarc3.1.1\views"
+    at EventEmitter.render (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\application.js:579:17)
+    at ServerResponse.render (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\response.js:961:7)
+    at C:\xampp\htdocs\karan\artistarc3.1.1\server.js:53:7
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\layer.js:95:5)
+    at C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\index.js:277:22
+    at Function.process_params (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\index.js:330:12)
+    at next (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\index.js:271:10)
+    at SendStream.error (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\node_modules\serve-static\index.js:120:7)
+    at emitOne (events.js:77:13)
+    at SendStream.emit (events.js:169:7)
+    at SendStream.error (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\node_modules\send\index.js:245:17)
+    at SendStream.onStatError (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\node_modules\send\index.js:356:12)
+    at next (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\node_modules\send\index.js:658:28)
+Error: Failed to lookup view "test" in views directory "C:\xampp\htdocs\karan\artistarc3.1.1\views"
+    at EventEmitter.render (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\application.js:579:17)
+    at ServerResponse.render (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\response.js:961:7)
+    at C:\xampp\htdocs\karan\artistarc3.1.1\server.js:53:7
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\layer.js:95:5)
+    at C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\index.js:277:22
+    at Function.process_params (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\index.js:330:12)
+    at next (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\lib\router\index.js:271:10)
+    at SendStream.error (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\node_modules\serve-static\index.js:120:7)
+    at emitOne (events.js:77:13)
+    at SendStream.emit (events.js:169:7)
+    at SendStream.error (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\node_modules\send\index.js:245:17)
+    at SendStream.onStatError (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\node_modules\send\index.js:356:12)
+    at next (C:\xampp\htdocs\karan\artistarc3.1.1\node_modules\express\node_modules\send\index.js:658:28)

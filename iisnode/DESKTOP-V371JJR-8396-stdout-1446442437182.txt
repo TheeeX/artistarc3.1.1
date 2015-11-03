@@ -1,0 +1,6 @@
+ #loaded - register.js!
+ #loaded - user.js!
+Express server listening on port \\.\pipe\1a78414f-1579-4188-ab6b-f811348c7041
+[0mGET / [31m500 [0m99.340 ms - 1924[0m
+yay!
+[0mGET / [31m500 [0m2.115 ms - 1924[0m

@@ -1,0 +1,10 @@
+loaded - test.js!
+loaded - testmongo.js!
+Express server listening on port \\.\pipe\88b74ce9-3dcc-4987-b6e8-77b81bae02d4
+[0mGET / [36m304 [0m697.721 ms - -[0m
+[0mGET /assets/material-design-icons/font/Material-Design-Icons.eot? [33m404 [0m7.328 ms - 73[0m
+[0mGET /assets/ionicons/fonts/ionicons.eot?v=2.0.0 [33m404 [0m1.715 ms - 55[0m
+[0mGET /assets/ionicons/fonts/ionicons.ttf?v=2.0.0 [33m404 [0m0.513 ms - 55[0m
+[0mGET /assets/ionicons/fonts/ionicons.woff?v=2.0.0 [33m404 [0m1.195 ms - 56[0m
+yay!
+[0mGET / [36m304 [0m11.699 ms - -[0m

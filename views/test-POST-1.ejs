@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>ajax call</title>
+</head>
+    <body>
+        <form id='form_registerArtist'  role='form' action=''>
+          Name: <input type="text" id="name" name="name"/><br/>
+          Email: <input type="text" id="email" name="email"/><br/>
+          Username: <input type="text" id="username" name="username"/><br/>
+          Password: <input type="password" id="password" name="password"/>
+          <input type="submit" id="login" value="Login"/>
+        </form>
+        
+        <!-- jQuery -->
+        <script type='text/javascript' src='assets/jquery/jquery.min.js'></script>
+        <script  type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript">
+
+            $('#form_registerArtist').submit(function () {
+                var data = JSON.stringify($(this));          //var data = JSON.stringify($(this).serialize());(--also works)
+                alert('data : ' + data);
+                $.ajax({
+                    type: 'POST',
+                    url: '/addartist2',
+                    data: data
+                })
+                .done(function (res) {
+                    alert('Success!! ' + res);
+                    console.log('data : ' + data);
+                })
+                return false;
+            });
+            /*-----------Server Side-----------*/
+            /*app.post('/addartist2', function (req, res) {
+            req.on('data', function (data) {
+            console.log('value ' + data);
+            });
+            register.addUser(testdata);
+            console.log('  ---- Done!!');
+            res.end('{"msg": "OK"}');
+            });
+            -----------------------------------*/
+          </script>
+    </body>
+</html>
