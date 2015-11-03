@@ -24,10 +24,36 @@ var upload = multer(); // for parsing multipart/form-data
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
-app.use(session({secret: 'ssshhhhh'}));
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+    secret: 'ssshhhhh',
+    name: 'cookie_name',
+    //store: sessionStore, // connect-mongo session store
+    //proxy: true,
+    resave: true,
+    saveUninitialized: true
+}));
+
+app.get('/home', function (req, res) {
+    sess = req.session;
+    //Session set when user Request our app via URL
+    if (sess.email) {
+        /*
+        * This line check Session existence.
+        * If it existed will do some action.
+        */
+        res.redirect('/');
+    }
+    else {
+        res.redirect('/register');
+        //res.render('test', { Tname: userName });
+    }
+    /* update this line to also pass var */
+    //res.render('login');
+    //res.redirect('/');
+});
 
 app.put('/addartist2', function (req, res) {
     req.on('data', function (data) {
@@ -68,15 +94,33 @@ app.get('/test', function (req, res) {
     res.render('test-POST-4');
 });
 
+app.get('/login', function (req, res) {
+    sess = req.session;
+    console.log(req.session);
+    res.render('login');
+});
+
 app.get('/register', function (req, res) {
-    /* update this line to also pass var */
     sess = req.session;
     console.log(req.session);
     res.render('register');
 });
 
 app.get('/', function (req, res) {
-    res.render('test', { Tname: userName });
+    /* update this line to also pass var */
+    res.render('home', { Tname: userName });
+});
+
+app.get('/admin', function (req, res) {
+    sess = req.session;
+    if (sess.email) {
+        res.write('<h1>Hello ' + sess.email + '</h1>');
+        res.end('<a href="+">Logout</a>');
+    }
+    else {
+        res.write('<h1>Please login first.</h1>');
+        res.end('<a href="+">Login</a>');
+    }
 });
 
 var server = http.createServer(app);
