@@ -9,7 +9,11 @@ exports.addUser = function (userData) {
     var rajan = new User({
         name: userData.input_fname,     //'artistarc',
         username: nameT, //'@artistarc',
-        password: userData.input_password  //'password',
+        password: userData.input_password,  //'password',
+        email: userData.input_email,
+        meta: {
+            dob: userData.input_dob
+        }
     });
 
     // call the custom method. this will just add -dude to his name

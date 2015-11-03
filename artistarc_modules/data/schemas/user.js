@@ -18,15 +18,15 @@ var userSchema = new Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   email: String,
-  admin: Boolean,       //{ type: Date, default: Date.now },
-  location: String,
+  admin: { type: Boolean, default: false },       //{ type: Boolean, default: Date.now },
+  location: { type: String, default: '' },
   meta: {
-    age: Number,
+    age: { type: Number, default: 0 },
     dob: Date,
-    website: String
+    website: { type: String, default: '' }
   },
   created_at: { type: Date, default: Date.now },
-  updated_at: Date
+  updated_at: { type: Date, default: Date.now }
 });
 
 // custom method to add string to end of name
