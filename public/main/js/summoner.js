@@ -12,7 +12,7 @@
 
             $('#form_registerArtist').submit(function () {
                 var data = JSON.stringify($(this).serializeObject());
-                //console.log(data);
+                console.log(data);
                 $.ajax({
                     type: 'POST',
                     url: '/addartist2',
@@ -20,8 +20,8 @@
                     data: data
                 })
                 .done(function (res) {
-                    alert('Success!! ' + res);
-                    console.log(data);
+                    //alert('Success!! ' + res);
+                    console.log(res);
                 })
                 return false;
             });

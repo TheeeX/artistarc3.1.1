@@ -6,15 +6,14 @@ exports.addUser = function (userData) {
     var nameT = capitalize(userData.input_username);
 
     // create a new user
-    var rajan = new User({
-        name: userData.input_fname,         //'artistarc',
-        username: nameT,                    //'@artistarc',
-        password: userData.input_password,  //'password',
-        email: userData.input_email,
-        meta: {
-            dob: userData.input_dob
-        }
-    });
+    var rajan = new User();
+
+        rajan.name = userData.input_fname;         //'artistarc',
+        rajan.username = nameT;                    //'@artistarc',
+        rajan.password = userData.input_password;  //'password',
+        rajan.email = userData.input_email;
+        rajan.meta.dob = userData.input_dob;
+
 
     // call the custom method. this will just add '@' to his name
     // user will be @name
