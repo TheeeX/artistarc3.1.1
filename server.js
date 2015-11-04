@@ -6,11 +6,14 @@
 
 var http = require('http');
 var path = require('path');
-var express = require('express');   // The ExpressJS framework
+var express = require('express');
+var passport = require('passport');
+var passportlocal = require('passport-local');
 var morgan  = require('morgan');    // For clearing logging messages
 var multer = require('multer'); // v1.0.5
 var bodyParser = require('body-parser');
-var session = require('express-session');
+var cookieParser = require('cookie-parser');
+var expressSession = require('express-session');
 
 console.log(' #loaded - register.js!');
 var register = require('./artistarc_modules/data/register');
@@ -23,12 +26,17 @@ var app = express();
 var upload = multer(); // for parsing multipart/form-data
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
-app.use(bodyParser.json());
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({
-    secret: 'ssshhhhh',
+app.use(cookieParser());
+app.use(bodyParser.json());
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(expressSession({
+    secret: process.env.SESSION_SECRET || 'ssshhhhh',
     name: 'cookie_name',
     //store: sessionStore, // connect-mongo session store
     //proxy: true,
@@ -37,7 +45,7 @@ app.use(session({
 }));
 
 app.get('/home', function (req, res) {
-    sess = req.session;
+    sess = req.expressSession;
     //Session set when user Request our app via URL
     if (sess.email) {
         /*
@@ -95,14 +103,12 @@ app.get('/test', function (req, res) {
 });
 
 app.get('/login', function (req, res) {
-    sess = req.session;
-    console.log(req.session);
+    sess = req.expressSession;
+    console.log(req.expressSession);
     res.render('login');
 });
 
 app.get('/register', function (req, res) {
-    sess = req.session;
-    console.log(req.session);
     res.render('register');
 });
 
@@ -112,7 +118,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/admin', function (req, res) {
-    sess = req.session;
+    sess = req.expressSession;
     if (sess.email) {
         res.write('<h1>Hello ' + sess.email + '</h1>');
         res.end('<a href="+">Logout</a>');

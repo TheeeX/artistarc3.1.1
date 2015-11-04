@@ -1,6 +1,5 @@
 //
- console.log(' #loaded - user.js!');
-// grab the things we need
+console.log(' #loaded - UserSchema');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 

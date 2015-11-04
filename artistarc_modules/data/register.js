@@ -5,10 +5,10 @@ exports.addUser = function (userData) {
 
     var nameT = capitalize(userData.input_username);
 
-    // create a new user called rajan
+    // create a new user
     var rajan = new User({
-        name: userData.input_fname,     //'artistarc',
-        username: nameT, //'@artistarc',
+        name: userData.input_fname,         //'artistarc',
+        username: nameT,                    //'@artistarc',
         password: userData.input_password,  //'password',
         email: userData.input_email,
         meta: {
@@ -16,19 +16,23 @@ exports.addUser = function (userData) {
         }
     });
 
-    // call the custom method. this will just add -dude to his name
-    // user will now be Chris-dude
+    // call the custom method. this will just add '@' to his name
+    // user will be @name
+
     rajan.artify(function (err, name) {
         if (err) throw err;
         console.log('Your new name is ' + name);
     });
+
     var teststr = '';
+
     function capitalize(teststr) {
         return teststr.charAt(0).toLowerCase() + teststr.slice(1);
         //"hello world".capitalize();  =>  "Hello world" 
     }
 
     // call the built-in save method to save to the database
+
     rajan.save(function (err) {
         if (err) throw err;
 
