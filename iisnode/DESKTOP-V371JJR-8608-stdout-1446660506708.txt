@@ -1,0 +1,5 @@
+ #loaded - register.js!
+ #loaded - UserSchema
+Express server listening on port \\.\pipe\360dd568-eab6-4277-a285-8849080d7f16
+yay!
+[0mGET / [32m200 [0m390.520 ms - 62912[0m

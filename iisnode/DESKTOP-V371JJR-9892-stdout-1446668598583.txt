@@ -1,0 +1,10 @@
+ #loaded - register.js!
+ #loaded - UserSchema
+Express server listening on port \\.\pipe\532a09b6-5a39-44b4-91c6-5355409f1be1
+[0mGET / [36m304 [0m481.319 ms - -[0m
+yay!
+[0mGET /assets/material-design-icons/font/Material-Design-Icons.eot? [33m404 [0m27.663 ms - -[0m
+[0mGET /assets/ionicons/fonts/ionicons.eot?v=2.0.0 [33m404 [0m6.198 ms - -[0m
+[0mGET /assets/ionicons/fonts/ionicons.ttf?v=2.0.0 [33m404 [0m0.882 ms - -[0m
+[0mGET /assets/ionicons/fonts/ionicons.woff?v=2.0.0 [33m404 [0m1.015 ms - -[0m
+[0mGET / [36m304 [0m7.144 ms - -[0m
