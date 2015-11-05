@@ -10,7 +10,7 @@
 
             /*------------------ Register -------------------*/
 
-            $('#form_registerArtist').submit(function () {
+            $('#testForm').submit(function () {
                 var data = JSON.stringify($(this).serializeObject());
                 console.log(data);
                 $.ajax({

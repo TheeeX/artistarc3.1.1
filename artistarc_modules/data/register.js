@@ -1,18 +1,18 @@
 // if our user.js file is at app/models/user.js
 var User = require('./schemas/user');
-
+var userData = {};
 exports.addUser = function (userData) {
 
-    var nameT = capitalize(userData.input_username);
+    var nameT = capitalize(userData.username);
 
     // create a new user
     var rajan = new User();
 
-        rajan.name = userData.input_fname;         //'artistarc',
+        rajan.name = userData.fname;         //'artistarc',
         rajan.username = nameT;                    //'@artistarc',
-        rajan.password = userData.input_password;  //'password',
-        rajan.email = userData.input_email;
-        rajan.meta.dob = userData.input_dob;
+        rajan.password = userData.password;  //'password',
+        rajan.email = userData.email;
+        rajan.meta.dob = userData.dob;
 
 
     // call the custom method. this will just add '@' to his name
@@ -35,7 +35,7 @@ exports.addUser = function (userData) {
     rajan.save(function (err) {
         if (err) throw err;
 
-        console.log('User saved successfully!');
+        console.log(' ### User saved successfully !OK');
     });
 
 }
